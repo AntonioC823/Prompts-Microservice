@@ -34,7 +34,8 @@ Example Error Response:
 
 Example Request Code:
 
-`import zmq
+```
+import zmq
 
 context = zmq.Context()
 socket = context.socket(zmq.REQ)
@@ -50,7 +51,8 @@ request = {
     }
 }
 
-socket.send_json(request)`
+socket.send_json(request)
+```
 
 
 To programmatically RECEIVE data from the microservice:
@@ -59,7 +61,8 @@ After sending a request, the program waits for a response from the microservice.
 
 Example Response Code:
 
-`response = socket.recv_json()
+```
+response = socket.recv_json()
 
 print(response)
 
@@ -68,7 +71,8 @@ Example Successful Response:
 {
     "success": true,
     "prompt": "Generate a story about a warrior named Aric exploring the world of Eldoria..."
-}`
+}
+```
 
 Response Fields:
 
