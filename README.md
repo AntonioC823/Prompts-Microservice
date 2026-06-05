@@ -35,11 +35,9 @@ Example Request Code:
 
 import zmq
 
-# Create a ZeroMQ context and request socket
 context = zmq.Context()
 socket = context.socket(zmq.REQ)
 
-# Connect to the prompts microservice
 socket.connect("tcp://localhost:5556")
 
 # Build request message
