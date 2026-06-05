@@ -4,11 +4,11 @@ The Prompts Microservice generates customized prompts using Google's Gemini AI a
 
 Before running the microservice, users must create a free Gemini API key. Please note that the free tier currently allows up to 20 requests per day.
 If the API key is not configured correctly, the microservice will be unable to generate prompts.
-Visit https://aistudio.google.com
-Sign in with a Google account.
-Select Get API Key.
-Create a new API key.
-Open a PowerShell terminal and set the environment variable (this helps prevent accidentally exposing your API key in source code or GitHub repositories):
+-Visit https://aistudio.google.com
+-Sign in with a Google account.
+-Select Get API Key.
+-Create a new API key.
+-Open a PowerShell terminal and set the environment variable (this helps prevent accidentally exposing your API key in source code or GitHub repositories):
 $env:GEMINI_API_KEY="YOUR_API_KEY_HERE"
 
 To programmatically REQUEST data from the microservice:
