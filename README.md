@@ -40,7 +40,6 @@ socket = context.socket(zmq.REQ)
 
 socket.connect("tcp://localhost:5556")
 
-# Build request message
 request = {
     "request": "Generate a story prompt for this character and world.",
     "details": {
@@ -52,12 +51,6 @@ request = {
 
 socket.send_json(request)
 
-Explanation:
-
-ZeroMQ context and REQ socket are created.
-The client connects to the microservice at tcp://localhost:5556.
-JSON request is constructed with the required fields.
-The request is sent to the microservice.
 
 To programmatically RECEIVE data from the microservice:
 
