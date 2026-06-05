@@ -16,9 +16,13 @@ def generate_prompt(request_text, details=None):
     if details:
         full_request += f"\n\nAdditional details:\n{details}"
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=full_request
-    )
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=full_request
+        )
 
-    return response.text.strip()
+        return response.text.strip()
+
+    except Exception as error:
+        return f"Error: {error}"
